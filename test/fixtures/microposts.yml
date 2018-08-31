@@ -1,0 +1,55 @@
+orange:
+  title: "My Title 1"
+  content: "I just ate an orange!"
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+tau_manifesto:
+  title: "My Title 2"
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  created_at: <%= 3.years.ago %>
+  user: michael
+
+cat_video:
+  title: "My Title 3"
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  created_at: <%= 2.hours.ago %>
+  user: michael
+
+most_recent:
+  title: "My Title 4"
+  content: "Writing a short test"
+  created_at: <%= Time.zone.now %>
+  user: michael
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  title: <%= Faker::Lorem.sentence(3) %>
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: michael
+<% end %>
+
+ants:
+  title: "Oh, is that what you want?"
+  content: "Oh, is that what you want? Because that's how you get ants!"
+  created_at: <%= 2.years.ago %>
+  user: archer
+
+zone:
+  title: "Oh, is that what you want?"
+  content: "Danger zone!"
+  created_at: <%= 3.days.ago %>
+  user: archer
+
+tone:
+  title: "Oh, is that what you want?"
+  content: "I'm sorry. Your words made sense, but your sarcastic tone did not."
+  created_at: <%= 10.minutes.ago %>
+  user: lana
+
+van:
+  title: "Oh, is that what you want?  "
+  content: "Dude, this van's, like, rolling probable cause."
+  created_at: <%= 4.hours.ago %>
+  user: lana

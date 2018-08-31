@@ -18,5 +18,12 @@ User.create!(name:  "Carlos Marx",
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now)
-
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+  title = Faker::Lorem.sentence(3)
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(title: title, content: content) }
+end
+
